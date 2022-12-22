@@ -17,6 +17,40 @@ let computer_choice = array[Math.floor(Math.random()*3)];
 
 let user_choice= prompt('rock, paper or scissors?: ');
 
+/* compare users choice vs computers choice */
+
+let a= user_choice.toLocaleLowerCase();
+console.log(a);
+let b= computer_choice;
+
+if (a=='rock' && b=='rock'){
+    alert('rock vs rock. draw!');}
+
+
+else if(a=='rock' && b=='scissors'){
+    alert('rock beats paper. you win!');}
+
+else if(a=='rock' && b=='paper'){
+    alert('paper beats rock. you lose!')}
+
+else if(a=='paper' && b=='rock'){
+    alert('paper beats rock. you win!')}
+
+else if(a=='paper' && b=='paper'){
+    alert('paper vs paper. draw!')}
+
+else if(a=='paper' && b=='scissors'){
+    alert('scissors beats paper. you lose!')}
+
+else if(a=='scissors'&& b=='rock'){
+    alert('rock beats scissors. you lose!')}
+
+else if(a=='scissors'&& b=='paper'){
+    alert('scussirs beats paper. you win!')}
+    
+else alert('scissors vs scissors. draw!');
+
+
 
 </script>
 
