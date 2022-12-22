@@ -12,7 +12,8 @@
 
 /*create variables to track who has won how many games */
 let user_score=0;
-let comp_score=0;    
+let comp_score=0;
+let draw=0;    
 
 /* loop to play 5 times */
 
@@ -35,6 +36,7 @@ let b= computer_choice;
 
 if (a=='rock' && b=='rock'){
     alert('rock vs rock. draw!');
+    draw++;
 }
 
 
@@ -51,7 +53,8 @@ else if(a=='paper' && b=='rock'){
     user_score++;}
 
 else if(a=='paper' && b=='paper'){
-    alert('paper vs paper. draw!')}
+    alert('paper vs paper. draw!');
+    draw++;}
 
 else if(a=='paper' && b=='scissors'){
     alert('scissors beats paper. you lose!')
@@ -65,9 +68,10 @@ else if(a=='scissors'&& b=='paper'){
     alert('scussirs beats paper. you win!');
     user_score++;}
     
-else alert('scissors vs scissors. draw!');
+else {alert('scissors vs scissors. draw!');
+    draw++;}
 }
-alert(`you won `+user_score +` games and the computer won `+comp_score+' games' )
+alert(`you won `+user_score +` games, the computer won `+comp_score+' games and you drew '+ draw +' games' )
 
 
 
